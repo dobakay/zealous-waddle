@@ -1,0 +1,13 @@
+{
+	"columns": ["ID", "Name", "Date", "Price"],
+	"records": [
+		[1, "John", 2141312312, "0.34252423"],
+		[2, "Lilly", 2141312312, "1.21323423"],
+		[3, "Divora", 2141312312, "10.0"]
+	],
+	"recordsPerPage": 10,
+	"currentPage": 1,
+	"orderBy": 1,
+	"orderType": "ASC",
+	"searchText": ""
+}

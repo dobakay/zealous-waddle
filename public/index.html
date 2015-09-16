@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table Task</title>
+</head>
+<body ng-app="App">
+	<table ng-controller="TableCtrl">
+		<thead>
+		<tr>
+			<td ng-repeat="column in tableColumnNames">{{column}}</td>
+		</tr>
+		<tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="row in tableRecords">
+			<td ng-repeat="info in row">{{info}}</td>
+		</tr>
+		</tbody>
+		</tr>
+	</table>
+	<!-- Libraries -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+
+	<!-- custom -->
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
