@@ -1,0 +1,15 @@
+body {
+	text-align: center;
+}
+
+table {
+	width: 500px;
+	height: 300px;
+	border: 1px solid black;
+	margin: 20px auto;
+}
+
+td {
+	border: 1px solid black;
+}
+
