@@ -14,7 +14,7 @@
 		<tr>
 		</thead>
 		<tbody>
-		<tr ng-repeat="row in tableRecords | limitTo:pageSize | orderBy: order | filter: search">
+		<tr ng-repeat="row in tableRecords | startFrom:currentPage*pageSize | limitTo:pageSize | orderBy: order | filter: search">
 			<td ng-repeat="info in row">{{info}}</td>
 		</tr>
 		</tbody>
@@ -24,16 +24,13 @@
 	<button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
 			Previous
 	</button>
-	{{currentPage+1}}/{{numberOfPages()}}
+	{{currentPage}}/{{numberOfPages()}}
 	<button ng-disabled="currentPage >= tableRecords.length/pageSize - 1" ng-click="currentPage=currentPage+1">
 			Next
 	</button>
 
 	<!-- Libraries -->
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-
 
 	<!-- custom -->
 	<script type="text/javascript" src="index.js"></script>
