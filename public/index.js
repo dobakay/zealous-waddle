@@ -16,7 +16,6 @@ App.controller('TableCtrl', function($scope, $http) {
 
 			$scope.currentPage = res.data['currentPage'];
 			$scope.pageSize = res.data['recordsPerPage'];
-
 			$scope.order = res.data['orderBy'];
 
 			$scope.numberOfPages=function(){
