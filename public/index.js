@@ -4,6 +4,9 @@
 var App = angular.module('App', []);
 
 App.controller('TableCtrl', function($scope, $http) {
+	$scope.currentPage = 0;
+	$scope.pageSize = 0;
+
 	$http.get('table.json')
 		.then(function(res){
 			$scope.tableColumnNames = res.data['columns'];

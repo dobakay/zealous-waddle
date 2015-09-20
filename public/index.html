@@ -4,9 +4,9 @@
 	<title>Table Task</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body ng-app="App">
+<body ng-app="App" ng-controller="TableCtrl">
 	<input type="text" placeholder="search" ng-model="search"/>
-	<table ng-controller="TableCtrl">
+	<table >
 		<thead>
 		<tr>
 			<td ng-repeat="column in tableColumnNames">{{column}}</td>
