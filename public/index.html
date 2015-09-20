@@ -9,13 +9,16 @@
 	<table >
 		<thead>
 		<tr>
-			<td ng-repeat="column in tableColumnNames">{{column}}</td>
+			<td ng-repeat="column in tableColumnNames" ng-click="setOrderBy($index)">{{column | uppercase}}</td>
 		</tr>
 		<tr>
 		</thead>
 		<tbody>
 		<tr ng-repeat="row in tableRecords | startFrom:currentPage*pageSize | limitTo:pageSize | orderBy: order | filter: search">
-			<td ng-repeat="info in row">{{info}}</td>
+			<td>{{row.id}}</td>
+			<td>{{row.name}}</td>
+			<td>{{row.date | date: 'yyyy-mm-dd'}}</td>
+			<td>{{row.price}}</td>
 		</tr>
 		</tbody>
 		</tr>

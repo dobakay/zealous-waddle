@@ -6,6 +6,8 @@ var App = angular.module('App', []);
 App.controller('TableCtrl', function($scope, $http) {
 	$scope.currentPage = 0;
 	$scope.pageSize = 0;
+	$scope.tableColumnNames = [];
+	$scope.tableRecords = [];
 
 	$http.get('table.json')
 		.then(function(res){
@@ -19,6 +21,10 @@ App.controller('TableCtrl', function($scope, $http) {
 
 			$scope.numberOfPages=function(){
 					return Math.ceil($scope.tableRecords.length/$scope.pageSize);
+			}
+
+			$scope.setOrderBy = function(index) {
+				$scope.order = $scope.tableColumnNames[index];
 			}
 		});
 });
